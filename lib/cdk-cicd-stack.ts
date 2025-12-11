@@ -11,7 +11,6 @@ export class CdkCicdStack extends cdk.Stack {
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.gitHub('ZillionClouds/aws-pipeline', 'cicd-practice'),
         commands: [
-          'cd cdk-cicd',
           'npm ci',
           'npx cdk synth'
         ],
